@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 using System.IO;
 namespace GreetingCardSummitive
 {
@@ -69,10 +70,10 @@ namespace GreetingCardSummitive
             {
               Foreward();
                Down();
-               Backward();
+              Backward();
             
                if (i == 0)
-                {
+               {
                     Down();
                 }
             }
@@ -82,9 +83,15 @@ namespace GreetingCardSummitive
                 Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
                 SolidBrush randombrush = new SolidBrush(randomColor);
                 size += 1;
-                g.FillPie(randombrush, column - size / 2, line - size / 2, size, size, i, 11);
+                g.FillPie(randombrush, 293 - size / 2, 212 - size / 2, size, size, i, 11);
                 Thread.Sleep(20);
+                if (i % 250 == 0)
+                {
+                    waka.Stop();
+                }
+                waka.Play();
             }
+            waka.Stop();
             line = 10;
             column = 0;
             
@@ -147,6 +154,7 @@ namespace GreetingCardSummitive
                 Thread.Sleep(100);
                 g.FillPie(blackBrush, column, line, 80, 80, 120, 300);
                 g.FillPie(randombrush, column, line, 80, 80, 120, 360);
+                waka.Stop();
                 waka.Play();
                 Thread.Sleep(100);
                 g.FillPie(blackBrush, column, line, 80, 80, 120, 360);

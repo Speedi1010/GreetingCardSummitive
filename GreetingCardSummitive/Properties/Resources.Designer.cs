@@ -63,9 +63,9 @@ namespace GreetingCardSummitive.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream waka_wav {
+        internal static System.IO.UnmanagedMemoryStream waka {
             get {
-                return ResourceManager.GetStream("waka_wav", resourceCulture);
+                return ResourceManager.GetStream("waka", resourceCulture);
             }
         }
     }
