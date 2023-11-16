@@ -11,6 +11,8 @@ using System.Threading;
 using System.Media;
 using System.IO;
 namespace GreetingCardSummitive
+    // Dylan de Groot
+    // This is my greeting card program
 {
     public partial class Form1 : Form
     {
